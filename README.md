@@ -23,7 +23,7 @@ The feature extraction section consists of three notebooks that access multiple 
 
 - **Short-Term HRV Notebook**:
   - Computes 10 short-term HRV metrics.
-  - Identifies periods of sleep for HRV calculations.
+  - Identifies periods of sleep with clean ECG for HRV calculations.
 
 - **Long-Term HRV Notebook**:
   - Computes long-term HRV metrics (e.g., SDNN24 and its variations).
@@ -34,16 +34,15 @@ The feature extraction section consists of three notebooks that access multiple 
 ### **Model Development**
 This section contains two main files:
 
-- **Build File**:
-  - Performs feature selection using LASSO regression.
-  - Compares two Linear Regression (LR) models:
+- **MAIN File**:
+  - Performs 5-fold cross val usign LASSO regression.
+  - Compares two LASSO models:
     - One including HRV metrics.
     - One excluding HRV metrics.
-  - Results are evaluated across four metrics using 10-fold cross-validation.
-  - Appropriate statistical tests (e.g., t-tests) are used to compare the models.
+  - Results are evaluated across 5 metrics using 5-fold cross-validation.
 
 - **SHAP Notebook**:
-  - Calculates SHAP (SHapley Additive exPlanations) values to determine feature contributions to the HRV model.
+  - Calculates SHAP (SHapley Additive exPlanations) values to determine feature contributions to the HRV model, subbing this into the cross-val described in the main file but in a different environment for SHAP.
 
 ---
 
