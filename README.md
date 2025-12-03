@@ -47,7 +47,7 @@ This section contains two main files:
 ---
 
 ## **Data Availability**
-This repository does not include any raw data. It is focused on feature extraction and model development. For raw signal processing, please refer to these links: (to be provided).
+This repository does not include any raw data. It is focused on feature extraction and model development. For raw signal processing, please the HR and accelerometer folders to see how the inital raw signals were processed.
 
 
 
